@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Text Twist Browser Game</title>
     <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Norican&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -13,15 +14,15 @@
         <div id="top-row">
             <div id="name">Text Twist</div>
             <div id="score-box">
-                <div id="score-button">SCORE</div>
+                <div id="score-button">SCORE:</div>
                 <div id="score-value">TBD</div>
             </div>
             <div id="time-box">
-                <div id="time-button">TIME</div>
+                <div id="time-button">TIME:</div>
                 <div id="time-value">TBD</div>
             </div>
             <div id="round-box">
-                <div id="round-button">ROUND</div>
+                <div id="round-button">ROUND:</div>
                 <div id="round-value">TBD</div>
             </div>
         </div>
@@ -40,26 +41,26 @@
             <div id=six-letter-3></div>
         </div>
         <div id="letter-box-container">
-            <div id="letter1">TBD</div>
-            <div id="letter2">TBD</div>
-            <div id="letter3">TBD</div>
-            <div id="letter4">TBD</div>
-            <div id="letter5">TBD</div>
-            <div id="letter6">TBD</div>       
+            <canvas id="letter-box-1"></canvas>
+            <canvas id="letter-box-2"></canvas>
+            <canvas id="letter-box-3"></canvas>
+            <canvas id="letter-box-4"></canvas>
+            <canvas id="letter-box-5"></canvas>
+            <canvas id="letter-box-6"></canvas>       
         </div>
         <div id="letter-ball-row">
-            <div id="ball1">Letter1</div>
-            <div id="ball2">Letter2</div>
-            <div id="ball3">Letter3</div>
-            <div id="ball4">Letter4</div>
-            <div id="ball5">Letter5</div>
-            <div id="ball6">Letter6</div>        
+            <canvas id="letter-ball-1"></canvas>
+            <canvas id="letter-ball-2"></canvas>
+            <canvas id="letter-ball-3"></canvas>
+            <canvas id="letter-ball-4"></canvas>
+            <canvas id="letter-ball-5"></canvas>
+            <canvas id="letter-ball-6"></canvas>        
         </div>
         <div id="control-row-container">
-            <button id="twist">TWIST</button>
-            <button id="last">LAST</button>
-            <button id="clear">CLEAR</button>
-            <button id="enter">ENTER</button>
+            <button id="control-twist">TWIST</button>
+            <button id="control-last">LAST</button>
+            <button id="control-clear">CLEAR</button>
+            <button id="control-enter">ENTER</button>
         </div>
         <div id="footer-row">
             <button id="menu">HOW TO PLAY</button>  <!-- will pop up in alert window -->

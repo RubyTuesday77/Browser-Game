@@ -1,23 +1,17 @@
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
 body {
     min-height: 100%;
     min-width: 100%;
 }
 
-#container {
+.container {
     display: flex;
     flex-direction: column;
     background-color: lightblue;
     margin: 5px;
     padding: 5px;
-    height: 200px;
     width: 95%;
-    border: 2px dotted blue;
+    height: 95%;
+    border: 2px solid blue;
 }
 
 #top-row {
@@ -26,7 +20,6 @@ body {
     justify-content: space-between;
     text-align: center;
     column-gap: 10px;
-    border: 2px solid black;
     height: 60px;
     width: 800px;
     margin: 3px;
@@ -34,55 +27,66 @@ body {
 }
 
 #name {
-    border: 2px solid black;
-    margin: 5px;
-    padding: 15px 60px 15px 15px;
+    margin: 0px;
+    padding: 2px 60px 15px 15px;
+    font-size: 40px;
+    line-height: 50px;
+    height: 50px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 4px 4px 4px #aaa;
+    font-family: 'Norican', cursive;
+
 }
 
 #score-box {
     display: flex;
-    border: 2px double green;
+    border: 4px double green;
     width: 180px;
+    line-height: 50px;
     column-gap: 20px;
-    margin: 5px;
+    margin: 2px;
+    font-family: MD Primer Bold,Rubik,Lato,Lucida Grande,Lucida Sans Unicode,Tahoma,Sans-Serif;
 
 }
 
 #time-box {
     display: flex;
-    border: 2px double green;
+    border: 4px double green;
     width: 180px;
+    line-height: 50px;
     column-gap: 20px;
-    margin: 5px;
+    margin: 2px;
+    font-family: MD Primer Bold,Rubik,Lato,Lucida Grande,Lucida Sans Unicode,Tahoma,Sans-Serif;
     
 }
 
 #round-box {
     display: flex;
-    border: 2px double green;
+    border: 4px double green;
     width: 180px;
+    line-height: 50px;
     column-gap: 20px;
-    margin: 5px;
-
+    margin: 2px;
+    font-family: MD Primer Bold,Rubik,Lato,Lucida Grande,Lucida Sans Unicode,Tahoma,Sans-Serif;
 }
 
 #word-box-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 250px;
+    height: 220px;
     border: 4px solid blue;
     margin: 5px;
     padding: 5px;
 }
 
-#letter-box-container {
+#letter-box-container {  
     display: flex;
     flex-direction: row;
     justify-content: center;
-    border: 2px solid black;
-    column-gap: 60px;
-    height: 60px;
+    column-gap: 10px;
+    height: 70px;
     margin: 3px;
     padding: 3px;
 }
@@ -91,9 +95,8 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    border: 2px solid black;
-    column-gap: 60px;
-    height: 60px;
+    column-gap: 10px;
+    height: 70px;
     margin: 3px;
     padding: 3px;
 }
@@ -102,9 +105,8 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    border: 2px solid black;
     height: 40px;
-    column-gap: 20px;
+    column-gap: 40px;
     margin: 3px;
     padding: 3px;
 }
@@ -118,4 +120,27 @@ body {
     margin: 3px;
     padding: 3px;
     column-gap: 20px;
-} 
+}
+
+canvas[id^="letter-box-"] {
+    border: 2px solid #000;
+    width: 60px;
+    height: 60px;
+    padding-top: 2px;
+}
+
+canvas[id^="letter-ball-"] {
+    border: 2px solid #000;
+    width: 60px;
+    height: 60px;
+    padding-top: 2px;
+}
+
+button[id^="control-"] {
+    border: 2px solid #000;
+    width: 80px;
+    height: 40px;
+    padding-top: 2px;
+    font-weight: bold;
+    font-family: MD Primer Bold,Rubik,Lato,Lucida Grande,Lucida Sans Unicode,Tahoma,Sans-Serif;
+}
