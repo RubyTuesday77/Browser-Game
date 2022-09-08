@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Text Twist Browser Game</title>
-    <script src="script.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Norican&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
 </head>
@@ -14,47 +13,35 @@
         <div id="top-row">
             <div id="name">Text Twist</div>
             <div id="score-box">
-                <div id="score-button">SCORE:</div>
-                <div id="score-value">TBD</div>
+                <div id="score">SCORE: <span id="score-value"></span></div>
             </div>
             <div id="time-box">
-                <div id="time-button">TIME:</div>
-                <div id="time-value">TBD</div>
+                <div id="time">TIME: <span id="time-left"></span></div>
             </div>
             <div id="round-box">
-                <div id="round-button">ROUND:</div>
-                <div id="round-value">TBD</div>
+                <div id="round">ROUND: <span id="round-num"></span></div>
             </div>
         </div>
         <div id="word-box-container">
-            <div id=three-letter-1></div>
-            <div id=three-letter-2></div>
-            <div id=three-letter-3></div>
-            <div id=four-letter-1></div>
-            <div id=four-letter-2></div>
-            <div id=four-letter-3></div>
-            <div id=five-letter-1></div>
-            <div id=five-letter-2></div>
-            <div id=five-letter-3></div>
-            <div id=six-letter-1></div>
-            <div id=six-letter-2></div>
-            <div id=six-letter-3></div>
+            <li>wordsSix</li>
+            <li>wordsFive</li>
+            <li>wordsFour</li>
         </div>
-        <div id="letter-box-container">
-            <canvas id="letter-box-1"></canvas>
-            <canvas id="letter-box-2"></canvas>
-            <canvas id="letter-box-3"></canvas>
-            <canvas id="letter-box-4"></canvas>
-            <canvas id="letter-box-5"></canvas>
-            <canvas id="letter-box-6"></canvas>       
+        <div id="box-container">
+            <div id="letter-box-1" class="letter-box"></div>
+            <div id="letter-box-2" class="letter-box"></div>
+            <div id="letter-box-3" class="letter-box"></div>
+            <div id="letter-box-4" class="letter-box"></div>
+            <div id="letter-box-5" class="letter-box"></div>
+            <div id="letter-box-6" class="letter-box"></div>       
         </div>
-        <div id="letter-ball-row">
-            <canvas id="letter-ball-1"></canvas>
-            <canvas id="letter-ball-2"></canvas>
-            <canvas id="letter-ball-3"></canvas>
-            <canvas id="letter-ball-4"></canvas>
-            <canvas id="letter-ball-5"></canvas>
-            <canvas id="letter-ball-6"></canvas>        
+        <div id="ball-container">
+            <div class="letter-ball"></div>
+            <div class="letter-ball"></div>
+            <div class="letter-ball"></div>
+            <div class="letter-ball"></div>
+            <div class="letter-ball"></div>
+            <div class="letter-ball"></div>
         </div>
         <div id="control-row-container">
             <button id="control-twist">TWIST</button>
@@ -63,9 +50,17 @@
             <button id="control-enter">ENTER</button>
         </div>
         <div id="footer-row">
-            <button id="menu">HOW TO PLAY</button>  <!-- will pop up in alert window -->
-            <button id="sound-toggle">SOUND ON/OFF</button>  <!-- toggle sound on/off -->
+            <button id="start">START GAME</button>
+            <button id="how-to">HOW TO PLAY</button>  <!-- will pop up in alert window -->
+            <button id="sound-toggle"> <!-- toggle sound on/off -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-volume-up" viewBox="0 0 16 16">
+                    <path d="M11.536 14.01A8.473 8.473 0 0 0 14.026 8a8.473 8.473 0 0 0-2.49-6.01l-.708.707A7.476 7.476 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303l.708.707z"/>
+                    <path d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.483 5.483 0 0 1 11.025 8a5.483 5.483 0 0 1-1.61 3.89l.706.706z"/>
+                    <path d="M10.025 8a4.486 4.486 0 0 1-1.318 3.182L8 10.475A3.489 3.489 0 0 0 9.025 8c0-.966-.392-1.841-1.025-2.475l.707-.707A4.486 4.486 0 0 1 10.025 8zM7 4a.5.5 0 0 0-.812-.39L3.825 5.5H1.5A.5.5 0 0 0 1 6v4a.5.5 0 0 0 .5.5h2.325l2.363 1.89A.5.5 0 0 0 7 12V4zM4.312 6.39 6 5.04v5.92L4.312 9.61A.5.5 0 0 0 4 9.5H2v-3h2a.5.5 0 0 0 .312-.11z"/>
+              </svg>
+            </button>
         </div>
     </div>
+    <script src="start-game.js"></script>
 </body>
 </html>

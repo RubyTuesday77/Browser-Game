@@ -1,5 +1,6 @@
 // Click Start to start game - signals startRound function
 let startButton = document.getElementById("start");
+let letterButtonArray = [];
 startButton.addEventListener("click", function startRound() {
 
     // #1: Pull random 6-lectter word from the dictionary (use fetch)
@@ -31,32 +32,35 @@ startButton.addEventListener("click", function startRound() {
     // Insert button into each letter-ball div and assign a letter from wordLettersShuffled array
     let letterBalls = document.getElementsByClassName("letter-ball");
     for(let i = 0; i < letterBalls.length; i++) {
-        let letterButton = document.createElement("button");
+        let letterButton = document.createElement("button")
         letterButton.innerHTML = wordLettersShuffled[i];
         letterButton.setAttribute("class", "letter-button");
+        letterButton.setAttribute("onclick", "moveLetter();");
+        letterButtonArray.push(letterButton)
         letterBalls[i].appendChild(letterButton);
-        letterButton.addEventListener("click", function() {
-            alert(letterButton.innerHTML);
-            let letterBoxes = document.getElementsByClassName("letter-box");
-            for(let i = 0; i < letterBoxes.length; i++) {
-                if(letterBoxes[i] == null) {
-                    
-                }
-           // } function moveLetter(newParent, oldParent) {
+    }
+
+}, {once : true})
+
+console.log(letterButtonArray)
+/* Function to move letter-button to letter-box div
+
+letterButton.addEventListener("click", function() {
+    alert(letterButton.innerHTML);
+    let letterBoxes = document.getElementsByClassName("letter-box");
+    for(let i = 0; i < letterBoxes.length; i++) {
+        if(letterBoxes[i] == null) {
+            
+        }
+
+        // } function moveLetter(newParent, oldParent) {
             //let oldParent = letterBalls[i];
             //function moveLetter(newParent, oldParent) {
                // newParent.appendChild(letterButton);
                // oldParent.removeChild(letterButton);
             //}
-            }  
-        })
+let buttonArray = 
+function moveLetter() {
+    alert('You clicked me!');
     }
-}, {once : true})
-
-
-// Function to move letter-button to letter-box div
-    // let clickedButton = 
-    // let letterBoxes = document.getElementsByClassName('letter-box');
-    //if(letterBox === null) {
-
- 
+*/
