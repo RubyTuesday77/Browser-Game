@@ -2,7 +2,7 @@
 const startButton = document.getElementById("start");
 
 // Declare ballArray to represent divs in ball-container:
-let ballsArray = document.getElementsByClassName("letter-ball");
+let ballArray = document.getElementsByClassName("letter-ball");
 
 // Declare boxArray to represent divs in box-container:
 let boxArray = document.getElementsByClassName("letter-box");
@@ -66,24 +66,18 @@ function startRound(event) {
         letterButton.innerHTML = letters[i];
         letterButton.classList.add("letter-button");
         letterButton.addEventListener("click", moveLetter);
-        // letterButton.addEventListener("click", moveButton);
-        ballsArray[i].append(letterButton);
+        ballArray[i].append(letterButton);
         letterButtonArray.push(letterButton);
     }
     this.disabled = true;
 }
 
-function moveLetter(event) {
-    console.log(event.currentTarget.innerHTML);
-    /* Alternative 1 *///  console.log(event.target.innerHTML);
-    /* Alternative 2 */// console.log(this.innerHTML);
-}
 
-/*function moveButton(event) {
-    if (this.parentElement.matches('.letter-ball')) {   
-    ballsArray.append(this);
-    } else {
-    boxArray.append(this);
+
+function moveLetter(event) {
+    if (this.parentElement.matches('.letter-ball')) {
+        boxArray[0].append(this);
+      } else {
+        ballArray[0].append(this);
+      }
     }
-  }
-*/
