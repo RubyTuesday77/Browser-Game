@@ -88,7 +88,7 @@ startButton.addEventListener("click", function startRound() {
             let letterButton = document.createElement("button");
             letterButton.innerHTML = letterShuffle[i];  // Grab letters from shuffled letter above
             letterButton.setAttribute("class", "letter-button");
-            letterButton.addEventListener("click", moveLetter);
+            // letterButton.addEventListener("click", moveLetter);
             letterBalls[i].appendChild(letterButton);
             letterButtonArray.push(letterButton);
         }
@@ -99,6 +99,13 @@ startButton.addEventListener("click", function startRound() {
 console.log(letterButtonArray)
 
 // Function to move letter-button from letter-ball div to letter-box div
-function moveLetter(letterButton) {
-    alert(letterButton.innerHTML)
+for (const button of document.getElementsByTagName("button")) {
+    button.addEventListener("click", clickHandler);
 }
+
+function clickHandler(evt) {
+    // Using `closest()` is unnecessary here, because our buttons don't have any children.
+    // We can still use it though.
+    const button = evt.target.closest("button");
+    console.log(button.textContent);
+  }
