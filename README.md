@@ -1,3 +1,5 @@
+Easiest Word Game Ever!!!
+
 Inspiration for Game:
 Text Twist is a timed anagram solver game. In each round, the game displays six preselected letters in random order that can be rearranged to form at least one six-letter word. The player is given two minutes to spell out as many valid words as possible, one of which must be a six-letter word that uses all letters. It is an understatement to sayt that I love this game.
 
