@@ -34,9 +34,9 @@ body {
     padding: 2px 60px 15px 15px;
     display: flex;
     white-space: nowrap;
-    font-size: 40px;
+    font-size: 50px;
     line-height: 50px;
-    height: 50px;
+    height: 60px;
     font-weight: bold;
     color: blue;
     text-align: left;
@@ -49,8 +49,9 @@ body {
     border: 4px double green;
     width: 180px;
     line-height: 50px;
-    column-gap: 20px;
+    column-gap: 0px;
     margin: 2px;
+    /* visibility: hidden;*/
     font-family: MD Primer Bold,Rubik,Lato,Lucida Grande,Lucida Sans Unicode,Tahoma,Sans-Serif;
 }
 
@@ -60,8 +61,9 @@ body {
     border: 4px double green;
     width: 180px;
     line-height: 50px;
-    column-gap: 20px;
+    column-gap: 0px;
     margin: 2px;
+    visibility: hidden;
     font-family: MD Primer Bold,Rubik,Lato,Lucida Grande,Lucida Sans Unicode,Tahoma,Sans-Serif;
     
 }
@@ -72,8 +74,9 @@ body {
     border: 4px double green;
     width: 180px;
     line-height: 50px;
-    column-gap: 20px;
+    column-gap: 0px;
     margin: 2px;
+    visibility: hidden;
     font-family: MD Primer Bold,Rubik,Lato,Lucida Grande,Lucida Sans Unicode,Tahoma,Sans-Serif;
 }
 
@@ -86,7 +89,7 @@ body {
     justify-content: space-around;
     column-gap: 10px;
     height: 220px;
-    width: 800px;
+    width: 750px;
     border: 4px solid blue;
     margin: 2px;
     padding: 2px;
@@ -121,7 +124,7 @@ ol {
 
 li {
     list-style-position: inside;
-    visibility: hidden;
+    /* visibility: hidden;*/
 }
 
 .header-column {
@@ -175,14 +178,22 @@ li {
 #footer-row {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-between;
     border: 2px solid blue;
     height: 30px;
     margin: 3px;
-    padding: 5px 20px 5px 0;
+    padding: 5px 20px 5px 20px;
     column-gap: 20px;
 }
+/*
+#control-last {
+    visibility: hidden; 
+}
 
+#control-clear {
+    visibility: hidden;
+}
+*/
 
 .letter-box {
     display: flex;
@@ -211,7 +222,7 @@ li {
 
 button[id^="control-"] {
     border: 2px solid #000;
-    width: 85px;
+    width: 105px;
     height: 40px;
     padding-top: 2px;
     font-weight: bold;
@@ -221,10 +232,6 @@ button[id^="control-"] {
 
 
 #start {
-    position: relative;
-    left: 0;
-    right: 0;
-    transform: translateX(-670%);
     border: 2px solid #000;
     font-weight: bold;
     font-size: 15px;

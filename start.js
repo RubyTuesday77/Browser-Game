@@ -1,30 +1,13 @@
-// Created an alert with pop up instructions by button click
-function DisplayAlert() {
-    var newLine = "\r\n"
-    var msg = "YOUR GOAL IS TO FORM A FOUR, FIVE OR SIX LETTER WORD FROM THE GIVEN LETTERS"
-    msg += newLine;
-    msg += "HOW TO PLAY:";
-    msg += newLine;
-    msg += "1. Click START.";
-    msg+= newLine;
-    msg += "2. Click on the LETTERS to move them to the above row.";
-    msg+= newLine;
-    msg += "3. Click ENTER to submit the word";
-    msg+= newLine;
-    msg += "4. You will receive an alert if you submitted a real word.";
-    alert(msg);
- }
-
 // Declare startButton variable:
 const startButton = document.getElementById("start");
 
-// Declare startArray to represent divs in ball-container:
-let startArray = document.getElementsByClassName("letter-ball");
+// Declare ballArray to represent divs in ball-container:
+let ballArray = document.getElementsByClassName("letter-ball");
 
 // Declare boxArray to represent divs in box-container:
 let boxArray = document.getElementsByClassName("letter-box");
 
-// Declare letterButtonArray to represent buttons that will be added to startArray
+// Declare startButton variable:
 let letterButtonArray = [];
 
 // Create array of words to use in game
@@ -54,7 +37,7 @@ let gameWordArray = wordsForGame[Math.floor(Math.random() * wordsForGame.length)
 // Grab gameWord from array
 let gameWord = gameWordArray[0];
 
-// Split the word into an array which contains the six letters
+// Split the word,  into an array whicg contains the six letters
 let letterArray = gameWord.split("");
 
 // Shuffle the letters using a function (at https://www.geeksforgeeks.org/how-to-shuffle-an-array-using-javascript/)
@@ -101,7 +84,7 @@ function startRound(event) {
         letterButton.innerHTML = letters[i];
         letterButton.classList.add("letter-button");
         letterButton.addEventListener("click", moveLetter);
-        startArray[i].append(letterButton);
+        ballArray[i].append(letterButton);
         letterButtonArray.push(letterButton);
     }
     addAnswerColumn(fourLetterList, fourLetterAnswers);
@@ -139,45 +122,43 @@ function moveLetter(event) {
     }
 }
 
+// Shuffle letters
+function shuffleLetters() {
+
+}
+
+// Clear board
 
 function matchWord(wordResult) {
-    let temp = false;
     if(wordResult.length === 4) {
         // Check if word matches any in <ol id="four-letter-answers"></ol>
         // Grab elements from ordered list containing the same word
         const answers = document.getElementById("four-letter-answers").getElementsByTagName("li");
         for(let i = 0; i< answers.length; i++) {
             if(answers[i].innerHTML == wordResult) {
-                alert('You Are Right!!');
-                temp = true;
+                answers[i].style.visibilty = "visible";
+                alert('You Are Right!!')
             }
-        } if(!temp) {
-            alert("WRONG!!!")
         }
-    } else if(wordResult.length === 5) {
+    } else if(wordResult.length == 5) {
         // check if word matches any in <ol id="five-letter-answers"></ol>
         // Grab elements from ordered list containing the same word
         const answers = document.getElementById("five-letter-answers").getElementsByTagName("li");
         for(let i = 0; i< answers.length; i++) {
             if(answers[i].innerHTML == wordResult) {
-                alert('You Are Right!!');
-                temp = true;
+                answers[i].style.visibilty = "visible";
+                alert('You Are Right!!')
             }
-        } if(!temp) {
-            alert("WRONG!!!")
         }
-    } else if(wordResult.length  === 6) { 
+    } else if(wordResult.length  == 6) { 
         // check if word matches any in <ol id="six-letter-answers"></ol>
         // Grab elements from ordered list containing the same word
         const answers = document.getElementById("six-letter-answers").getElementsByTagName("li");
         for(let i = 0; i< answers.length; i++) {
             if(answers[i].innerHTML == wordResult) {
-                alert('You Are Right!!');
-                temp = true;
+                answers[i].style.visibilty = "visible";
+                alert('You Are Right!!')
             }
-        }
-        if(!temp) {
-            alert("WRONG!!!")
         }
     } else {
         alert('WRONG')
@@ -204,4 +185,3 @@ submitWord.addEventListener("click", function getAnswer() {
     // return wordResult;
     console.log(wordResult); // this returns 'NARY'
 })
-
