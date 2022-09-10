@@ -1,3 +1,8 @@
+li {
+    list-style-position: inside;
+    visibility: visible;
+}
+
 body {
     max-height: 100%;
     max-width: 100%;
@@ -51,7 +56,7 @@ body {
     line-height: 50px;
     column-gap: 0px;
     margin: 2px;
-    /* visibility: hidden;*/
+    visibility: hidden;
     font-family: MD Primer Bold,Rubik,Lato,Lucida Grande,Lucida Sans Unicode,Tahoma,Sans-Serif;
 }
 
@@ -122,11 +127,6 @@ ol {
     padding-inline-start: 10px;
 }
 
-li {
-    list-style-position: inside;
-    /* visibility: hidden;*/
-}
-
 .header-column {
     position: fixed;
     margin: 1px;
@@ -185,7 +185,7 @@ li {
     padding: 5px 20px 5px 20px;
     column-gap: 20px;
 }
-/*
+
 #control-last {
     visibility: hidden; 
 }
@@ -193,7 +193,6 @@ li {
 #control-clear {
     visibility: hidden;
 }
-*/
 
 .letter-box {
     display: flex;

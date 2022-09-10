@@ -3,17 +3,23 @@ function DisplayAlert() {
     var newLine = "\r\n"
     var msg = "YOUR GOAL IS TO FORM A FOUR, FIVE OR SIX LETTER WORD FROM THE GIVEN LETTERS"
     msg += newLine;
+    msg += newLine;
     msg += "HOW TO PLAY:";
     msg += newLine;
     msg += "1. Click START.";
     msg+= newLine;
     msg += "2. Click on the LETTERS to move them to the above row.";
     msg+= newLine;
-    msg += "3. Click ENTER to submit the word";
+    msg += "3. Click ENTER to submit the word.";
     msg+= newLine;
-    msg += "4. You will receive an alert if you submitted a real word.";
+    msg += "4. An ALERT will show confirming if your word is correct.";
     alert(msg);
- }
+ };
+
+function showAnswers() {
+    let listAnswers = document.getElementsByTagName('li');
+    listAnswers.style.visibility = "visible";
+}
 
 // Declare startButton variable:
 const startButton = document.getElementById("start");
@@ -65,7 +71,7 @@ function shuffleArray(array) {
     array[i] = array[j];
     array[j] = temp;
     }
-    return array
+    return array;
 };
 
 // Assign a new variable to shuffled array
@@ -180,7 +186,7 @@ function matchWord(wordResult) {
             alert("WRONG!!!")
         }
     } else {
-        alert('WRONG')
+        alert('INVALID')
     }
 }
 
@@ -204,4 +210,3 @@ submitWord.addEventListener("click", function getAnswer() {
     // return wordResult;
     console.log(wordResult); // this returns 'NARY'
 })
-
