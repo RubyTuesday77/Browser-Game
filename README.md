@@ -1,7 +1,7 @@
 Easiest Word Game Ever!!!
 
 Inspiration for Game:
-Text Twist is a timed anagram solver game. In each round, the game displays six preselected letters in random order that can be rearranged to form at least one six-letter word. The player is given two minutes to spell out as many valid words as possible, one of which must be a six-letter word that uses all letters. It is an understatement to sayt that I love this game.
+Text Twist is a timed anagram solver game. In each round, the game displays six preselected letters in random order that can be rearranged to form at least one six-letter word. The player is given two minutes to spell out as many valid words as possible, one of which must be a six-letter word that uses all letters. It is an understatement to say that I love this game.
 
 Controls/How To Play:
 The goal is to form a four, five or six-letter word from the letters shown.
@@ -11,8 +11,8 @@ Instructions:
 2. Click on a LETTER to move it to first container in the letterbox row. Clicking on subsequent letters will move them the next empty container in the letterbox row.
 3. Click ENTER to submit the word.
 4. An ALERT will show confirming if your word is correct. (Note: The alert will return INVALID if the answer string is not at least four letters long)
-6. Click ANSWERS to show all correct four, five and six-letter words.
-7. These instructions can also be found by clicking 'HOW TO PLAY'.
+5. Click ANSWERS to show all correct four, five and six-letter words.
+6. These instructions can also be found by clicking 'HOW TO PLAY'.
 
 Technologies Used:
 VSCode - HTML, CSS, Javascript
