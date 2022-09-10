@@ -121,6 +121,7 @@ ol {
 
 li {
     list-style-position: inside;
+    visibility: hidden;
 }
 
 .header-column {
